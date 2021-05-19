@@ -24,15 +24,7 @@ In this work, we focus on estimating articulatory movements from acoustic featur
 ## Training 
   ### Configuring cfg.yaml
   To train the xSC and xMC AAI models, set x_vectors: True, and change the name of the model to xSC/xMC. Set subject conditions to "seen" or "unseen" to reproduce   the results as in the paper. To train any other AAI models, set x_vectors: False and change the model's name (RI/MC). 
-  ### Creating train and test data splits (5-fold cross val setup)
-  To generate data for seen subject conditions (to be found at ./subjects_list/):
-  ```
-  python3 makers/seen_data_gen.py
-  ```
-  Unseen subject conditions:
-  ```
-  python3 makers/unseen_data_gen.py
-  ```
+  
   ### To begin training (single GPU)
   ```
   python3 train.py --config (path to config file in your system) --gpu (gpu_id)
