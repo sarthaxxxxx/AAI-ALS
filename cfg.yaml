@@ -1,0 +1,19 @@
+training:
+  mfcc_dim: 39
+  ema_dim: 8
+  model_dir: /home/sarthak/als_aai/ckpt/
+  data_dir: /home/sarthak/als_aai/data/
+  data_loc: /home/sarthak/als_aai/subjects_list/
+  x_vectors: False
+  x_vectors_dim: 512
+  folds: 5
+  tasks: ['T1_', 'T2_', 'T4_', 'T5_']
+  sub_conds: seen
+  hyperparameters:
+    model: MC
+    BLSTM_units: 256
+    batch_size: 5
+    epochs: 50
+    monitor: val_loss
+    patience: 5
+
